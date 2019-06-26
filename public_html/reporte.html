@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
    </head>
-   <body>
+   <body onload="showFormat(1);showFormat(2); showFormat(3)">
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -23,7 +23,7 @@
     			Formatos
 		</button>	
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-				<button class="dropdown-item" id="formato1" onclick="showFormat(1)" >formato1</button> 
+				<button class="dropdown-item"  id="formato1" onclick="showFormat(1)" >formato1</button> 
     				<button class="dropdown-item" id="formato2" onclick="showFormat(2)" >formato2</button>
     				<button class="dropdown-item" id="formato3" onclick="showFormat(3)" >formato3</button>	
 			</div>
@@ -39,7 +39,7 @@
 		<br>
 		<input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
                 <br><br>
-                <button type="submit" class="btn btn-primary" onclick="return confirm('Estas seguro de quieres enviar este reporte?')" >Enviar</button>
+                <button type="submit" class="btn btn-primary" onclick="return confirm('Estas seguro de que quieres enviar este reporte?')" >Enviar</button>
         	</div>
 	</form>
 
@@ -48,9 +48,9 @@ function showFormat( formatNumber ){
     switch (formatNumber){
         case 1 : 
         
-            $("#formato1").on("click",function(){
-            $("#test1").val("Hello world!");
-            
+            $("#formato1").click(function(){
+            $("#test1").text("Hello world!");
+            $(this).click(showFormat(1));
             });
         
          break;
