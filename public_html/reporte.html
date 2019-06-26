@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>  
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   </head>
+   <body>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4" class="text-center">Reportes GPM</h1>
+  </div>
+</div>
+
+
+		<div class="dropdown text-right ">
+		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			Formatos
+		</button>	
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+				<button class="dropdown-item" id="formato1" onclick="showFormat(1)" >formato1</button> 
+    				<button class="dropdown-item" id="formato2" onclick="showFormat(2)" >formato2</button>
+    				<button class="dropdown-item" id="formato3" onclick="showFormat(3)" >formato3</button>	
+			</div>
+		</div>
+        <form class="text-center" action="/guardar_reportes.php" method="post" enctype="multipart/form-data">
+                <div class="form-group text-left">
+                   <label class="text-left" for="comment">Reporte:</label>
+		</div>
+                      <textarea class="form-control" rows="5" name="reporte" id="test1"></textarea>
+                <br><br>
+		<div class="text-center">
+		Selecciona archivos para adjuntar:
+		<br>
+		<input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
+                <br><br>
+                <button type="submit" class="btn btn-primary" onclick="return confirm('Estas seguro de quieres enviar este reporte?')" >Enviar</button>
+        	</div>
+	</form>
+
+	<script>
+function showFormat( formatNumber ){
+    switch (formatNumber){
+        case 1 : 
+        
+            $("#formato1").on("click",function(){
+            $("#test1").val("Hello world!");
+            
+            });
+        
+         break;
+        case 2 : 
+        
+            $("#formato2").click(function(){
+            $("#test1").val("Hello world!222");
+            });
+        
+        break;
+        case 3 : 
+        
+            $("#formato3").click(function(){
+            $("#test1").val("Hello world!333");
+            });
+         
+        break;
+    }
+}
+	</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
