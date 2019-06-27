@@ -47,24 +47,29 @@
 function showFormat( formatNumber ){
     switch (formatNumber){
         case 1 : 
-        
+            var textarea = document.getElementById('test1') ;
             $("#formato1").click(function(){
-            $("#test1").text("Hello world!");
-            $(this).click(showFormat(1));
+            //$("#test1").text("GPM:\nVenezuela:\nLAcosa esta bien Buena\n-------------------------------------\n\n\n\n\n\nFirma que talfi que nose que\n");
+           textarea.innerHTML = 'Extra stuff111';
             });
         
          break;
         case 2 : 
         
+            var textarea = document.getElementById('test1') ;
             $("#formato2").click(function(){
-            $("#test1").val("Hello world!222");
+           // $("#test1").val("Hello world!222");
+           textarea.innerHTML = 'Extra stuff222';
             });
         
         break;
         case 3 : 
-        
+             
+            var textarea = document.getElementById('test1') ;
             $("#formato3").click(function(){
-            $("#test1").val("Hello world!333");
+           // $("#test1").val("Hello world!333");i
+           textarea.innerHTML = 'Extra stuff3333333';
+	    
             });
          
         break;
