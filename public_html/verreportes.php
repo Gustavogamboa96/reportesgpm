@@ -68,11 +68,14 @@ td a{
            
        while($rpt = $reporte->fetch_assoc()){
 
-               $snippet = substr($rpt['reporte'], 0, 16);
+	       $snippet = substr($rpt['reporte'], 0, 16);
+	       $sql1 = "select count(path) from archivos where reporte_tid=".$rpt['reporte_tid'];
+	       $count = $conn->query($sql1);
+	       $cnt = $count->fetch_row();
 	       
                echo "      <tr>\n";
                echo "        <td class=\"col-lg\" ><a href='reportecompleto.php?id=".$rpt["reporte_tid"]."'>".$snippet."</a></td>\n";
-               echo "        <td class=\"col-lg\" >hello</td>\n";
+               echo "        <td class=\"col-lg\" >".$cnt[0]."</td>\n";
 	       echo "        <td class=\"col-lg\" >".$rpt['created_date']."</td>\n";
                echo "      </tr>\n";
 
