@@ -9,7 +9,7 @@
 
 
 
-      $reporte = $_POST['reporte'];
+      $reporte = nl2br($_POST['reporte']);
       $user_tid = $_COOKIE['Session'];
       $url = $_COOKIE['rol'];
 
@@ -27,10 +27,6 @@
 
       $total = count($_FILES['fileToUpload']['name']);
 
-//   echo $row["user_name"];
-
-   // exit;
-//  echo $_FILES["fileToUpload"]["name"];  
       $target_dir = "/var/www/html/reportesgpm.ga/public_html/uploads/".$row["user_name"]."/";
    
       for( $i=0 ; $i < $total ; $i++ ) {
