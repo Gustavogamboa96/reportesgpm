@@ -31,9 +31,9 @@ td a{
 
 <?php
 
-    $servername = "localhost";
-    $username = "admin";
-    $password = "Gustra1013!";
+    $servername = "";
+    $username = "";
+    $password = "!";
 
     // Create MySQL connection
     $conn = mysqli_connect($servername, $username, $password, "reportesgpm");
