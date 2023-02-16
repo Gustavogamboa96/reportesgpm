@@ -2,7 +2,7 @@
    if(isset($_COOKIE['Session'])){
       $servername = "localhost";
       $username = "admin";
-      $password = "Gustra1013!";
+      $password = "";
 
     // Create MySQL connection
       $conn = mysqli_connect($servername, $username, $password, "reportesgpm");
