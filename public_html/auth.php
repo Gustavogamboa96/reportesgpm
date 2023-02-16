@@ -4,9 +4,9 @@ if(isset($_COOKIE['Session'])){
       setcookie("Session", "", time()-3600, "/");
 
 
-      $servername = "localhost";
-    $username = "admin";
-    $password = "Gustra1013!";
+      $servername = "";
+    $username = "";
+    $password = "";
 
     // Create MySQL connection
     $conn = mysqli_connect($servername, $username, $password, "reportesgpm");
@@ -46,9 +46,9 @@ $username = $_POST["user_name"];
     }
 
 }else{
-    $servername = "localhost";
-    $username = "admin";
-    $password = "Gustra1013!";
+    $servername = "";
+    $username = "";
+    $password = "!";
 
     // Create MySQL connection
     $conn = mysqli_connect($servername, $username, $password, "reportesgpm");
