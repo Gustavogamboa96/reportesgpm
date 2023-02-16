@@ -12,9 +12,9 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
 	  <?php
-    		$servername = "localhost";
-    		$username = "admin";
-    		$password = "Gustra1013!";
+    		$servername = "";
+    		$username = "";
+    		$password = "";
 
     		// Create MySQL connection
     		$conn = mysqli_connect($servername, $username, $password, "reportesgpm");
